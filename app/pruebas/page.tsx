@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { format, parseISO } from "date-fns";
+import { Button } from "@/components/ui/button";
 
 const ENV = process.env.NEXT_PUBLIC_MIDDLEWARE;
 
@@ -13,6 +14,8 @@ const timeZone =
 
 export default function Page () {
   const [tasks, setTasks]:any = useState();
+
+ 
 
   const getTasks = async () => {
     try {
@@ -30,15 +33,16 @@ export default function Page () {
   };
 
   return (
-    <div style={{ height: "70vh" }} className="container p-5">
-      <button
+    <div className="">
+      <Button
+      variant="secondary"
         onClick={() => {
           getTasks();
         }}
       >
         GET TASKS
-      </button>
-      <div className="grid grid-cols-3 p-2">
+      </Button>
+      <div className="grid grid-cols-1 lg:grid-cols-3 p-2 gap-2">
         {tasks?.map((task:any, i:any) => (
           <div key={i} className="card p-2 mt-2 text-black">
             <div>title: {task.title}</div>

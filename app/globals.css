@@ -73,4 +73,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-4;
+  }
 }
