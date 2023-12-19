@@ -1,9 +1,7 @@
-
-
 export default function Home() {
   return (
     <main>
-      Inicio
+      <div className="container">Inicio</div>
     </main>
   );
 }
