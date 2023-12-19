@@ -31,7 +31,7 @@ const Navbar = () => {
             </AccordionContent>
           </div>
         </AccordionItem>
-        <div className="border-b"></div>
+        <div className="gradient-colors"></div>
       </Accordion>
     </header>
   );

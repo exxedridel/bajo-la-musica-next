@@ -32,9 +32,8 @@ export default function Page() {
 
   return (
     <main>
-      <div className="container">
+      <div className="container my-5">
         <Button
-          variant="secondary"
           onClick={() => {
             getTasks();
           }}
