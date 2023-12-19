@@ -13,13 +13,13 @@ import rutas from "./routes";
 
 const Navbar = () => {
   return (
-    <nav>
+    <header>
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
-          <div className="container py-2 px-4">
+          <div className="container">
             <AccordionTrigger>BAJO LA MUSICA</AccordionTrigger>
             <AccordionContent>
-              <div className="flex flex-col">
+              <nav className="flex flex-col">
                 <ul>
                   {rutas?.map((ruta: any, i: number) => (
                     <li key={i}>
@@ -27,13 +27,13 @@ const Navbar = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </nav>
             </AccordionContent>
           </div>
         </AccordionItem>
         <div className="border-b"></div>
       </Accordion>
-    </nav>
+    </header>
   );
 };
 

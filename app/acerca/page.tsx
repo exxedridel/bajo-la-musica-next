@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Acerca = () => {
   return (
-    <main>Acerca</main>
-  )
-}
+    <main>
+      <div className="container">Acerca</div>
+    </main>
+  );
+};
 
-export default Acerca
+export default Acerca;

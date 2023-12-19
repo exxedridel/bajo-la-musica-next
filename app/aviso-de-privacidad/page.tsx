@@ -2,7 +2,9 @@ import React from 'react'
 
 const AvisoDePrivacidad = () => {
   return (
-    <main>Aviso de privacidad</main>
+    <main>
+      <div className="container">Aviso de privacidad</div>
+    </main>
   )
 }
 

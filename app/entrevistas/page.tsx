@@ -2,7 +2,9 @@ import React from 'react'
 
 const Entrevistas = () => {
   return (
-    <main>Entrevistas</main>
+    <main>
+      <div className="container">Entrevistas</div>
+    </main>
   )
 }
 
