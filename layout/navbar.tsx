@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Accordion,
@@ -10,23 +10,44 @@ import {
 } from "@/layout/accordionNav";
 
 import rutas from "./routes";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   return (
     <header>
       <Accordion type="single" collapsible>
-        <AccordionItem value="item-1">
+        <AccordionItem value="mobile-menu">
           <div className="container">
-            <AccordionTrigger>BAJO LA MUSICA</AccordionTrigger>
+            <AccordionTrigger>
+              <Image
+                src="/bajo-la-musica-logo.png"
+                alt="Logo bajo la música"
+                width={112}
+                height={35}
+              />
+            </AccordionTrigger>
             <AccordionContent>
-              <nav className="flex flex-col">
+              <nav className="flex flex-row justify-between items-center">
                 <ul>
                   {rutas?.map((ruta: any, i: number) => (
-                    <li key={i}>
-                      <Link href={ruta.url}>{ruta.tag}</Link>
+                    <li key={i} className="mt-2">
+                      <Button variant="outline">
+                        <Link href={ruta.url}>{ruta.tag}</Link>
+                      </Button>
                     </li>
                   ))}
                 </ul>
+                <div>
+                  <div>
+                    <Image
+                      src="/bajo-la-musica-logo.png"
+                      alt="Logo bajo la música"
+                      width={105}
+                      height={35}
+                    ></Image>
+                    <Button>WhatsApp</Button>
+                  </div>
+                </div>
               </nav>
             </AccordionContent>
           </div>
