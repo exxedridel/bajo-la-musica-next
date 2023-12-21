@@ -1,13 +1,17 @@
-"use client"
+"use client";
 
 import { useAppContext, AppContextType } from "@/context/AppContext";
+import Header from "./header";
 
 export default function Home() {
   const { areas, setAreas }: AppContextType = useAppContext();
+
   return (
-    <main>
-      <pre>{JSON.stringify(areas, null, 2)}</pre>
-      <div className="container mt-4">Inicio</div>
-    </main>
+    <>
+      <Header />
+      <main>
+        
+      </main>
+    </>
   );
 }
