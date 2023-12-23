@@ -1,7 +1,6 @@
 "use client";
 
 import { useAppContext, AppContextType } from "@/context/AppContext";
-import Header from "./header";
 import Carousel from "@/components/Carousel";
 
 const images: any = [
@@ -32,7 +31,6 @@ export default function Home() {
 
   return (
     <>
-      {/* <Header /> */}
       <Carousel images={images} />
       <main></main>
     </>
