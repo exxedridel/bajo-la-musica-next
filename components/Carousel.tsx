@@ -19,6 +19,12 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 7000,
+    arrows: false,
+    customPaging: function(i:any) {
+        return (
+          <div className="text-black mr-2 pr-2 text-transparent">.</div>
+        );
+      },
     appendDots: (dots:any) => (
       <ul className="">
         {dots.map((dot:any, index:any) => (
